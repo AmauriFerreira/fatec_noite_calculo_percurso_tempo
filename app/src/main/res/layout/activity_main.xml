@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:padding="20dp"
+    android:useDefaultMargins="true">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_button_img_rounded"
+        android:src="@drawable/imagem"
+        tools:srcCompat="@tools:sample/avatars"
+        app:civ_border_width="4dp"
+        app:civ_border_color="@android:color/secondary_text_light_nodisable"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/marginBottom">
+
+        <Button
+            android:id="@+id/permissaoGpsButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanhoBotaoConceder"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/marginBottom"
+            android:background="@drawable/bg_button_rounded"
+            android:text="@string/conceder_permissao"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/marginBottom">
+
+        <Button
+            android:id="@+id/ativarGpsButton"
+            android:layout_width="match_parent"
+            android:text="@string/ativar_gps"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/marginRight"
+            android:padding="10dp"
+            android:background="@drawable/bg_button_rounded"
+            />
+
+        <Button
+            android:id="@+id/desativarGpsButton"
+            android:layout_width="match_parent"
+            android:text="@string/desativar_gps"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:background="@drawable/bg_button_rounded"
+            android:layout_marginBottom="@dimen/marginBottom"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/marginBottom">
+
+        <Button
+            android:id="@+id/iniciarButton"
+            android:layout_width="match_parent"
+            android:text="@string/iniciar_percurso"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:layout_marginRight="@dimen/marginRight"
+            android:background="@drawable/bg_button_rounded"
+            />
+
+        <Button
+            android:id="@+id/terminarButton"
+            android:layout_width="match_parent"
+            android:text="@string/terminar_percurso"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_rounded"
+            android:layout_marginBottom="@dimen/marginBottom"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginBottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/label"
+            android:text="@string/distancia" />
+
+        <TextView
+            android:id="@+id/distanciaPercorridaTextView"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="0 Km"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/label"
+            android:text="@string/tempo" />
+
+        <Chronometer
+            android:id="@+id/tempoPassadoChronometer"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/label" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:hint="@string/hintEditText"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/searchButton"
+            android:layout_width="323dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_search_category_default" />
+
+    </LinearLayout>
+
+</LinearLayout>
