@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private Button terminarButton;
     private EditText searchEditText;
     private FloatingActionButton searchButton;
-
+//variaveis
     private double lat;
     private double lon;
     private double distancia = 0d;
